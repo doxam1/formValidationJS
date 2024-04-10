@@ -50,6 +50,14 @@ body {
           & .formItem {
             display: flex;
             flex-direction: column;
+
+            & :focus:valid {
+              outline: 2px solid green;
+            }
+
+            & :focus:invalid {
+              outline: 2px solid red;
+            }
           }
 
           &.subBtn {

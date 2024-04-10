@@ -12,14 +12,12 @@
     <div>New user submittion form</div>
   </header>
   <main>
-    <form action="" method="post">
+    <form action="" method="post" novalidate class="newUserForm">
       <fieldset>
         <legend>Enter user Details:</legend>
         <div class="formLine">
           <div class="formItem">
-            <label for="fName">
-              First Name: <span aria-label="required"> * </span>
-            </label>
+            <label for="fName"> First Name: <span aria-label="required"> * </span> </label>
             <input type="text" id="fName" required minlength="2" name="fName" />
           </div>
           <div class="formItem">
@@ -49,9 +47,9 @@
         <div class="formLine">
           <div class="formItem">
             <label for="zipCode"> Zip Code: <span aria-label="required"> * </span></label>
-            <input type="tel" name="zipCode" id="zipCode" required />
+            <input type="tel" name="zipCode" id="zipCode" pattern="[0-9]+" required />
           </div>
-          <div class="formItem errorMsgs"></div>
+          <div class="formItem errorMsgs" aria-live="polite"></div>
         </div>
         <div class="formLine">
           <div class="formItem">
