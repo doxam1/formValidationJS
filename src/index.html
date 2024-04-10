@@ -10,22 +10,83 @@
       <div>New user submittion form</div>
     </header>
     <main>
-      <form>
+      <form action="" method="post">
         <fieldset>
-          <div class="line1 formLine">
+          <legend>Enter user Details:</legend>
+          <div class="formLine">
             <div class="formItem">
-              <legend>
+              <label for="fName">
                 First Name: <span aria-label="required"> * </span>
-              </legend>
-              <input type="text" required minlength="2" />
+              </label>
+              <input
+                type="text"
+                id="fName"
+                required
+                minlength="2"
+                name="fName"
+              />
             </div>
             <div class="formItem">
-              <legend>Last Name: <span aria-label="required"> * </span></legend>
-              <input type="text" required minlength="2" />
+              <label for="lName"
+                >Last Name: <span aria-label="required"> * </span></label
+              >
+              <input
+                type="text"
+                id="lName"
+                required
+                minlength="2"
+                name="lName"
+              />
             </div>
-            <div class="formLine">
-              <!-- continue from here !!!!!!!!!!!! -->
+          </div>
+          <div class="formLine">
+            <div class="formItem">
+              <label for="email"
+                >Email: <span aria-label="required"> * </span></label
+              >
+              <input type="email" id="email" name="email" required />
             </div>
+            <div class="formItem">
+              <label for="country">
+                Country: <span aria-label="required"> * </span></label
+              >
+              <input
+                type="text"
+                id="country"
+                name="country"
+                required
+                list="countryNames"
+              />
+              <datalist id="countryNames">
+                <option value="israel">Israel</option>
+                <option value="USA">United States</option>
+                <option value="england">England</option>
+                <option value="brasil">Brasil</option>
+                <option value="equador">Equador</option>
+                <option value="china">China</option>
+                <option value="vietnam">Vietnam</option>
+              </datalist>
+            </div>
+          </div>
+          <div class="formLine">
+            <div class="formItem">
+              <label for="zipCode">Zip Code: <span aria-label="required"> * </span></label>
+              <input type="tel" name="zipCode" id="zipCode" required />
+            </div>
+            <div class="formItem errorMsgs"></div>
+          </div>
+          <div class="formLine">
+            <div class="formItem">
+              <label for="password"> Enter Password: </label>
+              <input type="password" required id="password" name="password" />
+            </div>
+            <div class="formItem">
+                <label for="passwordConfirm"> Confirm Password: </label>
+                <input type="password" name="passwordConfirm" id="passwordConfirm" required />
+            </div>
+          </div>
+          <div class="formLine subBtn">
+            <input type="submit" value="submit" />
           </div>
         </fieldset>
       </form>
