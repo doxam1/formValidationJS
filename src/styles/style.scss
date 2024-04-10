@@ -10,31 +10,31 @@ body {
 
   & header {
     height: 50px;
-    width: 100svw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 3px black;
     font-weight: 700;
     font-size: 2rem;
+
   }
 
   & main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100svw;
+    max-width: 100svw;
     justify-content: center;
     align-items: center;
 
     & form {
-    //   max-width: 60%;
 
       & legend {
         text-decoration: 2px underline blue;
         font-size: 1.5rem;
         padding-bottom: 1.5rem;
-        
+
       }
 
       & fieldset {
@@ -51,29 +51,29 @@ body {
             display: flex;
             flex-direction: column;
           }
-          
+
           &.subBtn {
             display: flex;
             justify-content: center;
             padding: 1rem;
 
-            & input {
-                padding: .5rem;
-                background-color: lightskyblue;
-                border: none;
-                border-radius: 5%;
-                cursor: pointer;
+            & input.submitBtn {
+              padding: .5rem;
+              background-color: lightskyblue;
+              border: none;
+              border-radius: 5%;
+              cursor: pointer;
 
-                &:hover {
-                    opacity: 80%;
+              &:hover {
+                opacity: 80%;
 
-                    &:active {
-                        opacity: 1;
+                &:active {
+                  opacity: 1;
 
-                    }
                 }
+              }
             }
-        }
+          }
         }
       }
     }
